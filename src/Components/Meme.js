@@ -50,6 +50,18 @@ export default function Meme() {
             [name]: value
         }))
     }
+
+    
+
+    const loadFile = function(event) {
+        var url = URL.createObjectURL(event.target.files[0]);
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            randomImage: url
+        }))
+
+        // console.log(url)
+    };
     
     return (
         <main>
@@ -76,6 +88,15 @@ export default function Meme() {
                 >
                     Get a new meme image 🖼
                 </button>
+
+                
+        
+                    <input className="upload1" type="file"  accept="image/*" name="image" id="file"  onChange={loadFile} />
+                    <label className="form--button2" htmlFor="file">Upload Your Own Image<i class="material-icons">file_upload</i></label>
+                    <img className="imageMeme" id="output"/>
+
+                
+
             </div>
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image" />
@@ -90,6 +111,7 @@ export default function Meme() {
                     Export Meme
                 </button>
             </div>
+            
         </main>
     )
 }

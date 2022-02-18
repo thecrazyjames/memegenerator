@@ -9,7 +9,7 @@ body {
 
 main {
   padding: 36px;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .header {
@@ -58,6 +58,18 @@ main {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+label{
+  padding: 10px;
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
 
 .form--button--export {
@@ -113,4 +125,8 @@ main {
 
 .top {
   top: 0;
+}
+
+.upload1 {
+  display: none;
 }
