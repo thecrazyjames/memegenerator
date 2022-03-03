@@ -86,20 +86,20 @@ export default function Meme() {
                     className="form--button"
                     onClick={getMemeImage}
                 >
-                    Get a new meme image 🖼
+                    Get a new meme image 🖼 
                 </button>
 
                 
         
                     <input className="upload1" type="file"  accept="image/*" name="image" id="file"  onChange={loadFile} />
                     <label className="form--button2" htmlFor="file">Upload Your Own Image<i class="material-icons">file_upload</i></label>
-                    <img className="imageMeme" id="output"/>
+                    <img className="imageMeme" alt="file upload icon" id="output"/>
 
                 
 
             </div>
             <div className="meme">
-                <img src={meme.randomImage} className="meme--image" />
+                <img src={meme.randomImage} className="meme--image" alt="random meme" />
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>

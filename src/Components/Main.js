@@ -6,6 +6,8 @@ function Main() {
     <div className="Main">
       
         <Meme />
+
+        
     </div>
   );
 }
